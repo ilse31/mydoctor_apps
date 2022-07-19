@@ -1,18 +1,21 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {ILLogo} from '../../assets';
-import {Button, Input, Link} from '../../components';
+import {Button, Gap, Input, Link} from '../../components';
 
 const SignIn = () => {
   return (
     <View style={styles.page}>
       <ILLogo />
       <Text style={styles.title}>Masuk dan mulai berkonsultasi</Text>
-      <Input />
-      <Input />
-      <Link />
+      <Input label={'Email Address'} />
+      <Gap height={10} />
+      <Input label={'Password'} />
+      <Link title="Forgot Password ?" size={12} />
+      <Gap height={40} />
       <Button title={'Sign In'} />
-      <Link />
+      <Gap height={30} />
+      <Link title="Create New Account" align="center" size={16} />
     </View>
   );
 };
